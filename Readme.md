@@ -15,8 +15,8 @@ This is a Spring Boot-based REST API that provides user activity details. It sup
 ## 🔧 Setup & Run Instructions
 ### 1️⃣ Clone the repository:
 ```sh
-git clone https://github.com/your-repo/user-activity-api.git
-cd user-activity-api
+git clone https://github.com/ronak750/user-activity-tracker.git
+cd user-activity-tracker
 ```
 
 ### 2️⃣ Build & Run the project:
