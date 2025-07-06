@@ -33,9 +33,9 @@ public class UserDetailsController {
 
         // Validate userAction string (to prevent IllegalArgumentException)
         Optional<UserAction> actionEnum = parseUserAction(userAction);
-        // if (userAction != null && actionEnum.isEmpty()) {
-        //     throw new InvalidParameterException("Invalid userAction provided. Allowed values: " + Arrays.toString(UserAction.values()));
-        // }
+        if (userAction != null && actionEnum.isEmpty()) {
+            throw new InvalidParameterException("Invalid userAction provided. Allowed values: " + Arrays.toString(UserAction.values()));
+        }
 
         UserDetailsResponseDTO response = userDetailsService.getUserActions(userId, actionEnum.orElse(null), limit, sortingOrder, pageNo);
         return ResponseEntity.ok(response);
